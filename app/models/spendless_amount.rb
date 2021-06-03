@@ -1,0 +1,2 @@
+class SpendlessAmount < ApplicationRecord
+end
