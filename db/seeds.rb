@@ -3,9 +3,31 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
  
-wonga = Goal.new(description: "Lotsa Wonga", goal_amount: 100)
+# create_table "goals", force: :cascade do |t|
+#     t.integer "goal_amount"
+#     t.string "description"
+#     t.datetime "created_at", precision: 6, null: false
+#     t.datetime "updated_at", precision: 6, null: false
+#   end
 
-total = Total.new(total: 0)
+#   create_table "spendless_amounts", force: :cascade do |t|
+#     t.integer "amount"
+#     t.datetime "created_at", precision: 6, null: false
+#     t.datetime "updated_at", precision: 6, null: false
+#     t.integer "total_id"
+#   end
+
+#   create_table "totals", force: :cascade do |t|
+#     t.integer "total"
+#     t.datetime "created_at", precision: 6, null: false
+#     t.datetime "updated_at", precision: 6, null: false
+#     t.integer "goal_id"
+#   end
+
+# movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+
+wonga = Goal.create(description: "Lotsa Wonga", goal_amount: 100)
+
+total = Total.new(total: 0, goal_id: wonga.id)
