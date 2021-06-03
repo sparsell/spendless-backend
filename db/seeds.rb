@@ -6,4 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
  
-wonga = Goal.new(name: "Lotsa Wonga", goal_amount: 100)
+wonga = Goal.new(description: "Lotsa Wonga", goal_amount: 100)
+
+total = Total.new(total: 0)
