@@ -1,8 +1,8 @@
 # MODELS:
 
 [] Goal
-    integer - goal
-    string - name (optional)
+    integer - goal_amount
+    string - description (optional)
 
     - Has one total
 
