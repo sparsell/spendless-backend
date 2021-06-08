@@ -8,9 +8,9 @@ class Api::V1::GoalsController < ApplicationController
     def create
         goal = Goal.create(goal_params)
         if goal.save
-            render json
+            render json: goal, status: :accepted
         else
-
+            render json: {errors: goal.errors.full_messages}, status: :unprocessible_entity
         end
     end
 
