@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   namespace :api do
       namespace :v1 do
-          resources :goals, only: [:create]
-          resources :totals, only: [:create, :edit, :update]
-          resources :spendless_amounts, only: [:index, :create]
+          resources :goals, only: [:create, :index]
+          resources :totals, only: [:create, :edit, :update, :index]
+          resources :spendless_amounts, only: [:index, :create, :index]
       end
   end
 end

@@ -1,4 +1,5 @@
 class SpendlessAmountSerializer
   include JSONAPI::Serializer
-  attributes 
+  attributes :amount, :total_id, :total
+  belongs_to :total
 end
