@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_06_08_154917) do
     t.integer "amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "total_id"
+    t.bigint "total_id", null: false
     t.index ["total_id"], name: "index_spendless_amounts_on_total_id"
   end
 
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_06_08_154917) do
     t.integer "total"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "goal_id"
+    t.bigint "goal_id", null: false
     t.index ["goal_id"], name: "index_totals_on_goal_id"
   end
 
