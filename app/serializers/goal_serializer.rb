@@ -1,4 +1,4 @@
 class GoalSerializer
   include JSONAPI::Serializer
-  attributes  :description, :goal_amount
+  attributes :goal_amount
 end
