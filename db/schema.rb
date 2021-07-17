@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_08_154917) do
+ActiveRecord::Schema.define(version: 2021_07_17_104854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "goals", force: :cascade do |t|
     t.integer "goal_amount"
-    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -27,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_06_08_154917) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "total_id", null: false
+    t.string "description"
     t.index ["total_id"], name: "index_spendless_amounts_on_total_id"
   end
 
