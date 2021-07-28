@@ -6,9 +6,9 @@ class Api::V1::TotalsController < ApplicationController
     end
     
     def create
-        @total.new(total_params)
-        if @total.save 
-            render json: @total, status: :accepted
+        total = Total.create(total_params)
+        if total.save 
+            render json: total, status: :accepted
         else
             render json: {errors: @total.errors.full_messages }, status: :unprocessible_entity
         end
