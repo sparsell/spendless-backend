@@ -5,10 +5,13 @@ class Api::V1::SpendlessAmountsController < ApplicationController
         render json: SpendlessAmountSerializer.new(spendless_amounts)
     end
 
+    # TODO: need to assign to total_id (spendless_amount belongs_to :total)
     def create
-        spendless_amount.new(spendless_amount_params)
+        spendless_amount = SpendlessAmount.create(spendless_amount_params)
+        spendless_amount.total = Total.first
+        
         if spendless_amount.save    
-            render jeson: spendless_amount, status: :accepted
+            render json: spendless_amount, status: :accepted
         else
             render json: {errors: spendless_amount.errors.full_messages }, status: :unprocessible_entity
         end
@@ -18,7 +21,9 @@ class Api::V1::SpendlessAmountsController < ApplicationController
     private
 
     def spendless_amount_params
-        params.require(:spendless_amount).permit(:description, :total_id)
+        params.require(:spendless_amount).permit(:amount, :description, :total_id)
+        # params.require(:spendless_amount).permit(:amount, :description)
+
     end
 
 
