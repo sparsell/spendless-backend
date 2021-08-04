@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   namespace :api do
       namespace :v1 do
-          resources :goals, only: [:create, :index]
-          resources :totals, only: [:edit, :update, :index]
+          resources :goals, only: [:update, :index]
+          resources :totals, only: [ :index, :update]
           resources :spendless_amounts, only: [:index, :create]
       end
   end
