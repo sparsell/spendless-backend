@@ -17,9 +17,9 @@ class Api::V1::GoalsController < ApplicationController
     end
 
     def update
-        goal = Goal.find(pararms[:id])
+        goal = Goal.find(params[:id])
         goal.update(goal_amount: params[:goal][:goal_amount])
-        pry
+        
     end
 
     private
