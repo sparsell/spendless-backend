@@ -5,7 +5,6 @@ class Api::V1::SpendlessAmountsController < ApplicationController
         render json: SpendlessAmountSerializer.new(spendless_amounts)
     end
 
-    # TODO: need to assign to total_id (spendless_amount belongs_to :total)
     def create
         spendless_amount = SpendlessAmount.create(spendless_amount_params)
         spendless_amount.total = Total.first
