@@ -4,5 +4,4 @@ class SpendlessAmountSerializer
   attributes :amount, :description
   belongs_to :total
 
-  validates :amount, :description, presence: true
 end
