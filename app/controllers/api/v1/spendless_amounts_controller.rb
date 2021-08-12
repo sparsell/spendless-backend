@@ -10,7 +10,7 @@ class Api::V1::SpendlessAmountsController < ApplicationController
         spendless_amount.total = Total.first
         
         if spendless_amount.save    
-            render json: spendless_amount, status: :accepted
+            render json: SpendlessAmountSerializer.new(spendless_amount)
         else
             render json: {errors: spendless_amount.errors.full_messages }, status: :unprocessible_entity
         end
