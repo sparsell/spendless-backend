@@ -8,7 +8,8 @@ class Api::V1::TotalsController < ApplicationController
     def create
         total = Total.create(total_params)
         if total.save 
-            render json: total, status: :accepted
+            # render json: total, status: :accepted
+            render json: TotalSerializer.new(totals)
         else
             render json: {errors: @total.errors.full_messages }, status: :unprocessible_entity
         end
