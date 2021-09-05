@@ -14,12 +14,9 @@ class Api::V1::TotalsController < ApplicationController
         end
     end
 
-    def edit
-
-    end
-
     def update
-
+        total = Total.find(params[:id])
+        total.update(total: params[:total][:total])
     end
 
     private
