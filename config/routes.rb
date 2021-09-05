@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
       namespace :v1 do
           resources :goals, only: [:update, :index]
-          resources :totals, only: [ :index, :update]
+          resources :totals, only: [ :update, :index]
           resources :spendless_amounts, only: [:index, :create]
       end
   end
