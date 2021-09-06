@@ -24,7 +24,7 @@ Now, start logging the times when you spent less (than you could or would have).
     
 When you reach your goal, you can celebrate! 
 
-<a href src="https://github.com/sparsell/spendless-frontend">Spendless Frontend</a>
+<p>Link to <a href src="https://github.com/sparsell/spendless-frontend">Spendless Frontend</a>Github repo.</p>
 
     
 
