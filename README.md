@@ -1,7 +1,7 @@
 
  Spendless runs on Ruby on Rails (as an API) and JavaScript. It uses a Postgres Database. 
 
- Once you clone the git respository, you need to create the database and run the migrations. 
+ Once you clone the git respository (see both back and frontend repos), you need to create the database and run the migrations. 
 
 
 ***     ***     ***     ***     ***     ***     ***     ***     ***     ***
@@ -24,7 +24,7 @@ Now, start logging the times when you spent less (than you could or would have).
     
 When you reach your goal, you can celebrate! 
 
-<p>Link to <a href src="https://github.com/sparsell/spendless-frontend">Spendless Frontend</a>Github repo.</p>
+<p>Link to <a href src="https://github.com/sparsell/spendless-frontend">Spendless Frontend</a> Github repo.</p>
 
     
 
