@@ -1,24 +1,31 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ Spendless runs on Ruby on Rails (as an API) and JavaScript. It uses a Postgres Database. 
 
-Things you may want to cover:
+ Once you clone the git respository, you need to create the database and run the migrations. 
 
-* Ruby version
 
-* System dependencies
+***     ***     ***     ***     ***     ***     ***     ***     ***     ***
 
-* Configuration
+Spendless is a tool to help you be more mindful of how you spend your money. We make a lot of purchases on automatic. Spendless will keep track the amounts of money you save on purchases that you paused to consider. 
 
-* Database creation
+You can log things like:
 
-* Database initialization
+- you waited to buy something on sale
+- you bought an item in bulk so it was cheaper
+- you made dinner at home instead of going out
+- you found a generic brand
+- you bought at a second hand store or through on an online marketplace
 
-* How to run the test suite
+How to use Spendless:
 
-* Services (job queues, cache servers, search engines, etc.)
+    The first time you open the app, you will see there is no goal set. Enter a goal amount in the space provided. 
 
-* Deployment instructions
+    Now, start logging the times when you spent less (than you could or would have). Each amount will be added to the total. You can also add a description. 
+    
+    When you reach your goal, you can celebrate! 
 
-* ...
+    
+
+   
+
+
