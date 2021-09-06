@@ -18,11 +18,13 @@ You can log things like:
 
 How to use Spendless:
 
-    The first time you open the app, you will see there is no goal set. Enter a goal amount in the space provided. 
+The first time you open the app, you will see there is no goal set. Enter a goal amount in the space provided. 
 
-    Now, start logging the times when you spent less (than you could or would have). Each amount will be added to the total. You can also add a description. 
+Now, start logging the times when you spent less (than you could or would have). Each amount will be added to the total. You can also add a description. 
     
-    When you reach your goal, you can celebrate! 
+When you reach your goal, you can celebrate! 
+
+<a href src="https://github.com/sparsell/spendless-frontend">Spendless Frontend</a>
 
     
 
