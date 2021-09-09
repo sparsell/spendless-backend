@@ -1,9 +1,8 @@
 class Api::V1::GoalsController < ApplicationController
 
     def index
-        goals = Goal.all 
-        # render json: goals
-        render json: GoalSerializer.new(goals)
+        goal = Goal.all 
+        render json: GoalSerializer.new(goal)
     end
 
     def create
@@ -18,6 +17,11 @@ class Api::V1::GoalsController < ApplicationController
     def update
         goal = Goal.find(params[:id])
         goal.update(goal_amount: params[:goal][:goal_amount])
+        if goal.save
+            render json: GoalSerializer.new(goal)
+        else
+            render json: {errors: total.errors.full_messages}, status: :unprocessible_entity
+        end
     end
 
     private
@@ -27,3 +31,13 @@ class Api::V1::GoalsController < ApplicationController
         end
 
 end
+
+def update
+        total = Total.find(params[:id])
+        total.update(total: total.spendless_amounts.sum(:amount))
+         if total.save
+            render json: TotalSerializer.new(total)
+         else
+            render json: {errors: total.errors.full_messages}, status: :unprocessible_entity
+        end
+    end
