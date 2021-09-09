@@ -21,8 +21,6 @@ class Api::V1::SpendlessAmountsController < ApplicationController
 
     def spendless_amount_params
         params.require(:spendless_amount).permit(:amount, :description, :total_id)
-        # params.require(:spendless_amount).permit(:amount, :description)
-
     end
 
 

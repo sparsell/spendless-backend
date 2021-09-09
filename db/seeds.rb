@@ -28,12 +28,5 @@
 # movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# wonga = Goal.create(description: "Lotsa Wonga", goal_amount: 100)
-# total = Total.new(total: 0, goal_id: wonga.id)
-
 goal = Goal.create(goal_amount: 0)
 total = Total.create(total: 0, goal_id: goal.id)
-
-
-# Goal.destroy_all
-# Total.destroy_all

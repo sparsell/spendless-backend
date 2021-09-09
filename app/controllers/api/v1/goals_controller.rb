@@ -4,7 +4,6 @@ class Api::V1::GoalsController < ApplicationController
         goals = Goal.all 
         # render json: goals
         render json: GoalSerializer.new(goals)
-
     end
 
     def create
@@ -19,7 +18,6 @@ class Api::V1::GoalsController < ApplicationController
     def update
         goal = Goal.find(params[:id])
         goal.update(goal_amount: params[:goal][:goal_amount])
-        
     end
 
     private

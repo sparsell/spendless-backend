@@ -27,9 +27,7 @@ class Api::V1::TotalsController < ApplicationController
     private
 
         def total_params
-            
-            params.require(total).permit(:total, :goal_id)
-            
+            params.require(total).permit(:total, :goal_id) 
         end
 
 end
